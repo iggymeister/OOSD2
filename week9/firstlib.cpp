@@ -1,10 +1,14 @@
 #include <iostream>
+#include <string>
 #include "firstlib.h"
 using namespace std;
 void printGreeting()
 {
 int ndays;
 cout << "Welcome to C++ Library Programming" << endl;
+
+getMyLocation();
+
 cout << "This program predicts weather forecast up to 3 days." << endl << "Please enter how many days forward you want the weather forecast for: " << endl;
 cin >> ndays;
 weatherForecast(ndays);
@@ -28,4 +32,12 @@ for(int i = 0; i < n; i++)
 cout << endl << "Day " << i+1 << endl << "a) Highest degree Celsius predicted: " << highest[i] << endl << "b) Lowest degree Celsius predicted: " << lowest[i] << endl << "c) Rainfall predicted: " << rainfall[i] << endl << "d) Windspeed predicted: " << windspeed[i] << endl << "e) Wind-direction: " << windDirection[i] << endl;
 } 
 }
+}
+
+void getMyLocation()
+{
+	string stringRef;
+	cout << "Please enter the string reference: " << endl;
+	cin >> stringRef;
+	cout << "The location of the passed string reference is: " << &stringRef << endl << endl;
 }
